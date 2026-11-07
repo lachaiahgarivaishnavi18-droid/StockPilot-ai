@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "fastapi",
+  "regions": ["iad1"],
+  "buildCommand": "node scripts/vercel-build.mjs",
+  "functions": {
+    "app.py": {
+      "maxDuration": 300,
+      "excludeFiles": "{.vercel-auth/**,.venv/**,.logs/**,frontend/node_modules/**,backend/tests/**,docs/**,data/**,**/*.db,**/__pycache__/**}"
+    }
+  }
+}
